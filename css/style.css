@@ -9,16 +9,6 @@
   text-justify: kashida;
 }
 
-#userSection {
-  border-color: black;
-  border-style: 1px solid;
-}
-
-#computerSection {
-  border-color: black;
-  border-style: 1px solid;
-}
-
 #footArea {
   height: 200px;
   border-color: red;
@@ -45,4 +35,16 @@
 
 .displayOff {
   display: none;
+}
+
+.winBorder {
+  border: 10px solid green;
+}
+
+.loseBorder {
+  border: 10px solid red;
+}
+
+.userChoice {
+  background-color: yellow;
 }
