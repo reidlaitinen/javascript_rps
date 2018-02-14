@@ -15,10 +15,15 @@
   border-style: 1px solid;
 }
 
-#mainTitleText {
+.mainTitleText {
   font-size: 75px;
-  text-align: center;
 }
+
+.mainTitle {
+  text-align: center;
+  overflow-x: scroll;
+}
+
 
 #user-row {
   height: 200px;
