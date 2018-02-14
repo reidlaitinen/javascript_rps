@@ -29,8 +29,8 @@
 }
 
 .gameIcon {
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 189px;
+  max-height: 189px;
 }
 
 .displayOff {
@@ -47,4 +47,16 @@
 
 .userChoice {
   background-color: yellow;
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+.color {
+  color: black;
 }

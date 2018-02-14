@@ -33,12 +33,10 @@ function clearFrames() {
 }
 
 function frameWin(id) {
-  console.log("Winner element id: " + id)
   document.getElementById(id).classList.add('winBorder')
 }
 
 function frameLoss(id) {
-  console.log("Loser element id: " + id)
   document.getElementById(id).classList.add('loseBorder')
 }
 
@@ -48,6 +46,7 @@ function tieGame(userChoice, computerChoice) {
   frameWin('computer-'+computerChoice+'-img')
   // highlightUserChoice(userChoice)
   showComputerChoice(computerChoice)
+  document.getElementById('result').className = "black"
 }
 
 function userWin(userChoice, computerChoice) {
@@ -56,6 +55,7 @@ function userWin(userChoice, computerChoice) {
   frameLoss('computer-' + computerChoice + '-img')
   // highlightUserChoice(userChoice)
   showComputerChoice(computerChoice)
+  document.getElementById('result').className = "green"
   
 }
 
@@ -64,6 +64,7 @@ function computerWin(userChoice, computerChoice) {
   frameLoss(userChoice)
   frameWin('computer-' + computerChoice + '-img')
   showComputerChoice(computerChoice)
+  document.getElementById('result').className = "red"
 
 }
 
