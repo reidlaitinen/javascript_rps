@@ -19,7 +19,7 @@ function showComputerChoice(id) {
 }
 
 
-function clearFrames() {
+function clearBorders() {
   var computerClasses = "computerOption gameIcon displayOff"
   var userClasses = "userOption gameIcon"
   var computerElements = document.getElementsByClassName('computerOption')
@@ -41,7 +41,7 @@ function frameLoss(id) {
 }
 
 function tieGame(userChoice, computerChoice) {
-  clearFrames()
+  clearBorders()
   frameWin(userChoice)
   frameWin('computer-'+computerChoice+'-img')
   // highlightUserChoice(userChoice)
@@ -50,7 +50,7 @@ function tieGame(userChoice, computerChoice) {
 }
 
 function userWin(userChoice, computerChoice) {
-  clearFrames()
+  clearBorders()
   frameWin(userChoice)
   frameLoss('computer-' + computerChoice + '-img')
   // highlightUserChoice(userChoice)
@@ -60,7 +60,7 @@ function userWin(userChoice, computerChoice) {
 }
 
 function computerWin(userChoice, computerChoice) {
-  clearFrames()
+  clearBorders()
   frameLoss(userChoice)
   frameWin('computer-' + computerChoice + '-img')
   showComputerChoice(computerChoice)
@@ -75,7 +75,9 @@ function displayResult(winner, userChoice, computerChoice) {
 }
 
 function getWinner(userChoice, computerChoice) {
-  if ((userChoice == 'rock' && computerChoice == 'scissors') || (userChoice == 'paper' && computerChoice == 'rock') || (userChoice == 'scissors' && computerChoice == 'paper')) {
+  if ((userChoice == 'rock' && computerChoice == 'scissors') ||
+     (userChoice == 'paper' && computerChoice == 'rock') ||
+     (userChoice == 'scissors' && computerChoice == 'paper')) {
        userWin(userChoice, computerChoice);
        displayResult('User ', userChoice, computerChoice)
      } else if (userChoice == computerChoice) {
